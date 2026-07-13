@@ -15,6 +15,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const PORT = process.env.PORT || 8080
 
 // ------------------------------------------------------------
 // STEP 1 — Import your database connection and Quote model
@@ -41,7 +42,6 @@ const QuoteModel = require('./models/quote')
 
 
 const app = express()
-const PORT = 8080
 
 app.use(express.json())  // lets the server read JSON from req.body
 app.use(morgan('dev'))   // logs every incoming request
