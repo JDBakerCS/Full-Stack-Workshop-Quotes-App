@@ -45,7 +45,9 @@ const app = express()
 
 app.use(express.json())  // lets the server read JSON from req.body
 app.use(morgan('dev'))   // logs every incoming request
-app.use(cors())          // allows the React frontend to call this server
+app.use(cors({
+  origin: 'https://full-stack-workshop-quotes-4mtfruejs-ttp-jdb.vercel.app'
+}))         // allows the React frontend to call this server
 
 
 // ============================================================
