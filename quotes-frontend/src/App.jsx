@@ -97,7 +97,7 @@ export default function App() {
   async function handleCreate(e) {
     e.preventDefault();
     try {
-      const res = await fetch(`${API_URL}/api/quotes`, {
+      const res = await fetch(`${VITE_API_URL}/api/quotes`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
